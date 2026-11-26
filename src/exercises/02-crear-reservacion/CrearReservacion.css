@@ -2,53 +2,70 @@
   text-align: left;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
+
+  @media (min-width: 768px) {
+    gap: 24px;
+  }
 }
 
 .crear-reservacion__header {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-
-  h1 {
-    margin: 0;
-  }
+  gap: 10px;
 }
 
 .crear-reservacion__intro {
   color: var(--text);
   font-size: 1rem;
+  line-height: 1.5;
 }
 
 .crear-reservacion__sections {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
+
+  @media (min-width: 768px) {
+    gap: 20px;
+  }
 }
 
 .crear-reservacion__card {
-  padding: 24px;
+  padding: 16px;
   border: 1px solid var(--border);
   border-radius: 12px;
   background: var(--social-bg);
 
   h2 {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
 
-  @media (max-width: 768px) {
-    padding: 18px;
+  @media (min-width: 768px) {
+    padding: 24px;
+
+    h2 {
+      margin-bottom: 16px;
+    }
   }
 }
 
 .crear-reservacion__lead {
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   color: var(--text-h);
+
+  @media (min-width: 768px) {
+    margin-bottom: 16px;
+  }
 }
 
 .crear-reservacion__outro {
-  margin-top: 16px;
+  margin-top: 14px;
   color: var(--text);
+
+  @media (min-width: 768px) {
+    margin-top: 16px;
+  }
 }
 
 .crear-reservacion__list {
@@ -58,19 +75,26 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  overflow-wrap: break-word;
 
   li {
-    padding-left: 14px;
+    padding-left: 12px;
     border-left: 2px solid var(--accent-border);
+  }
+
+  @media (min-width: 768px) {
+    li {
+      padding-left: 14px;
+    }
   }
 }
 
 .crear-reservacion__list--ordered {
   list-style: decimal;
-  padding-left: 22px;
+  padding-left: 20px;
 
   li {
-    padding-left: 8px;
+    padding-left: 6px;
     border-left: none;
   }
 
@@ -78,19 +102,28 @@
     color: var(--accent);
     font-weight: 600;
   }
+
+  @media (min-width: 768px) {
+    padding-left: 22px;
+
+    li {
+      padding-left: 8px;
+    }
+  }
 }
 
 .crear-reservacion__email {
-  padding: 20px;
+  padding: 14px;
   border: 1px solid var(--border);
   border-radius: 10px;
   background: var(--bg);
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
 
-  @media (max-width: 768px) {
-    padding: 16px;
+  @media (min-width: 768px) {
+    padding: 20px 24px;
+    gap: 16px;
   }
 }
 
@@ -102,6 +135,7 @@
   gap: 6px;
   color: var(--text-h);
   font-size: 0.95rem;
+  overflow-wrap: break-word;
 }
 
 .crear-reservacion__muted {
@@ -117,9 +151,13 @@
 }
 
 .crear-reservacion__email-details {
-  padding-left: 14px;
+  padding-left: 12px;
   border-left: 2px solid var(--accent-border);
   display: flex;
   flex-direction: column;
   gap: 4px;
+
+  @media (min-width: 768px) {
+    padding-left: 14px;
+  }
 }
