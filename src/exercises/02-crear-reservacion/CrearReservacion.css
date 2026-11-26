@@ -1,0 +1,125 @@
+.crear-reservacion {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.crear-reservacion__header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  h1 {
+    margin: 0;
+  }
+}
+
+.crear-reservacion__intro {
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.crear-reservacion__sections {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.crear-reservacion__card {
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--social-bg);
+
+  h2 {
+    margin-bottom: 16px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 18px;
+  }
+}
+
+.crear-reservacion__lead {
+  margin-bottom: 16px;
+  color: var(--text-h);
+}
+
+.crear-reservacion__outro {
+  margin-top: 16px;
+  color: var(--text);
+}
+
+.crear-reservacion__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  li {
+    padding-left: 14px;
+    border-left: 2px solid var(--accent-border);
+  }
+}
+
+.crear-reservacion__list--ordered {
+  list-style: decimal;
+  padding-left: 22px;
+
+  li {
+    padding-left: 8px;
+    border-left: none;
+  }
+
+  li::marker {
+    color: var(--accent);
+    font-weight: 600;
+  }
+}
+
+.crear-reservacion__email {
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @media (max-width: 768px) {
+    padding: 16px;
+  }
+}
+
+.crear-reservacion__email-meta {
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: var(--text-h);
+  font-size: 0.95rem;
+}
+
+.crear-reservacion__muted {
+  color: var(--text);
+  font-style: italic;
+}
+
+.crear-reservacion__email-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  line-height: 1.55;
+}
+
+.crear-reservacion__email-details {
+  padding-left: 14px;
+  border-left: 2px solid var(--accent-border);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
