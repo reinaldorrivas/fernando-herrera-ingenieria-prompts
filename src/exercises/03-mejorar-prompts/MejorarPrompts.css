@@ -102,6 +102,12 @@
   border: 1px solid var(--accent-border);
 }
 
+.mejorar-prompts__status--in-progress {
+  color: var(--text-h);
+  background: var(--code-bg);
+  border: 1px solid var(--accent-border);
+}
+
 .mejorar-prompts__status--pending {
   color: var(--text);
   background: var(--bg);

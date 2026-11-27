@@ -4,12 +4,20 @@ import { ConsejosSalud } from "./subexercises/ConsejosSalud";
 import { ViajesAvila } from "./subexercises/ViajesAvila";
 import "./MejorarPrompts.css";
 
+type ExerciseStatus = "completed" | "in-progress" | "pending";
+
 interface SubExerciseTab {
   readonly id: string;
   readonly label: string;
-  readonly status: "completed" | "pending";
+  readonly status: ExerciseStatus;
   readonly Component: ComponentType;
 }
+
+const STATUS_LABELS: Record<ExerciseStatus, string> = {
+  completed: "Completado",
+  "in-progress": "En progreso",
+  pending: "Pendiente",
+};
 
 const SUB_EXERCISES: readonly SubExerciseTab[] = [
   {
@@ -27,7 +35,7 @@ const SUB_EXERCISES: readonly SubExerciseTab[] = [
   {
     id: "salud",
     label: "3. Dame consejos de salud",
-    status: "pending",
+    status: "in-progress",
     Component: ConsejosSalud,
   },
 ];
@@ -74,7 +82,7 @@ export function MejorarPrompts() {
               <span
                 className={`mejorar-prompts__status mejorar-prompts__status--${tab.status}`}
               >
-                {tab.status === "completed" ? "Completado" : "Pendiente"}
+                {STATUS_LABELS[tab.status]}
               </span>
             </button>
           );
